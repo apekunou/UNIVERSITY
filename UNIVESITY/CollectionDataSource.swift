@@ -13,18 +13,22 @@ class CollectionDataSource: NSObject, UICollectionViewDataSource  {
     
     public static let shared = CollectionDataSource()
     var usersArray: [User] = []
-    
-    override init() {
-        //super init()
-        //var usersArray = NetworkManager.shared.fetchUsersData()
-        usersArray = NetworkManager.shared.usersArray
-    }
+
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if NetworkManager.shared.usersArray.count == 0{
+             NetworkManager.shared.fetchUsersData(){ usrArray in
+                 self.usersArray = usrArray
+                 DispatchQueue.main.async {
+                 collectionView.reloadData()
+                 }
+             }
+             }
         return NetworkManager.shared.usersArray.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+
         let user = NetworkManager.shared.usersArray[indexPath.row]
         
         let cellDef = collectionView.dequeueReusableCell(withReuseIdentifier: CodeCollectionViewCell.id, for: indexPath)
@@ -36,9 +40,9 @@ class CollectionDataSource: NSObject, UICollectionViewDataSource  {
             else{
                 
         }
-        DispatchQueue.main.async {
-                       collectionView.reloadData()
-                       }
+//        DispatchQueue.main.async {
+//                       collectionView.reloadData()
+//                       }
         return cellDef
     }
 }

@@ -7,11 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		56A0853E245710DE00C5C702 /* app.svg in Resources */ = {isa = PBXBuildFile; fileRef = 56A0853D245710DD00C5C702 /* app.svg */; };
+		56A0854824571EFD00C5C702 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56A0854724571EFD00C5C702 /* Assets.xcassets */; };
+		56A0854A245724BA00C5C702 /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56A08549245724BA00C5C702 /* StorageManager.swift */; };
+		56CF1E72244F8E8300526CDF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF1E71244F8E8300526CDF /* SettingsViewController.swift */; };
 		56DB1423244363FE0065AFFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB1422244363FE0065AFFA /* AppDelegate.swift */; };
 		56DB1425244363FE0065AFFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB1424244363FE0065AFFA /* SceneDelegate.swift */; };
 		56DB1427244363FE0065AFFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB1426244363FE0065AFFA /* LoginViewController.swift */; };
 		56DB142A244363FE0065AFFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56DB1428244363FE0065AFFA /* Main.storyboard */; };
-		56DB142C244364040065AFFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 56DB142B244364040065AFFA /* Assets.xcassets */; };
 		56DB142F244364040065AFFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56DB142D244364040065AFFA /* LaunchScreen.storyboard */; };
 		56DB143724436A920065AFFA /* PersonsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB143624436A920065AFFA /* PersonsCollectionViewController.swift */; };
 		56DB143B244470E40065AFFA /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56DB143A244470E40065AFFA /* LoginManager.swift */; };
@@ -24,12 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		56A0853D245710DD00C5C702 /* app.svg */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = app.svg; sourceTree = "<group>"; };
+		56A0854724571EFD00C5C702 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		56A08549245724BA00C5C702 /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		56CF1E71244F8E8300526CDF /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		56DB141F244363FE0065AFFA /* UNIVESITY.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UNIVESITY.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		56DB1422244363FE0065AFFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		56DB1424244363FE0065AFFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		56DB1426244363FE0065AFFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		56DB1429244363FE0065AFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		56DB142B244364040065AFFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		56DB142E244364040065AFFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		56DB1430244364040065AFFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		56DB143624436A920065AFFA /* PersonsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonsCollectionViewController.swift; sourceTree = "<group>"; };
@@ -78,7 +84,8 @@
 				56DB1426244363FE0065AFFA /* LoginViewController.swift */,
 				56DB143624436A920065AFFA /* PersonsCollectionViewController.swift */,
 				56DB1428244363FE0065AFFA /* Main.storyboard */,
-				56DB142B244364040065AFFA /* Assets.xcassets */,
+				56A0853D245710DD00C5C702 /* app.svg */,
+				56A0854724571EFD00C5C702 /* Assets.xcassets */,
 				56DB142D244364040065AFFA /* LaunchScreen.storyboard */,
 				56DB1430244364040065AFFA /* Info.plist */,
 				56DB143C2444A5A20065AFFA /* PasswordValidator.swift */,
@@ -87,6 +94,8 @@
 				56DB14422445AFF30065AFFA /* CodeCollectionViewCell.swift */,
 				56DB14442445C5830065AFFA /* ProfileViewController.swift */,
 				56DB14462445D8240065AFFA /* CollectionDataSource.swift */,
+				56CF1E71244F8E8300526CDF /* SettingsViewController.swift */,
+				56A08549245724BA00C5C702 /* StorageManager.swift */,
 			);
 			path = UNIVESITY;
 			sourceTree = "<group>";
@@ -150,7 +159,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				56DB142F244364040065AFFA /* LaunchScreen.storyboard in Resources */,
-				56DB142C244364040065AFFA /* Assets.xcassets in Resources */,
+				56A0853E245710DE00C5C702 /* app.svg in Resources */,
+				56A0854824571EFD00C5C702 /* Assets.xcassets in Resources */,
 				56DB142A244363FE0065AFFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -173,6 +183,8 @@
 				56DB14432445AFF40065AFFA /* CodeCollectionViewCell.swift in Sources */,
 				56DB1441244501480065AFFA /* UserStructure.swift in Sources */,
 				56DB1425244363FE0065AFFA /* SceneDelegate.swift in Sources */,
+				56CF1E72244F8E8300526CDF /* SettingsViewController.swift in Sources */,
+				56A0854A245724BA00C5C702 /* StorageManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

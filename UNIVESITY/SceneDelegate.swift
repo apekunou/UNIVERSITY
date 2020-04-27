@@ -18,9 +18,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
        // guard let _ = (scene as? UIWindowScene) else { return }
-        LoginManager.shared.makeLogoff()
+       // LoginManager.shared.makeLogoff()
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
+        if let style = UserDefaults.standard.value(forKey: "style") as? Int {
+          switch style {
+            case 0:
+              window?.overrideUserInterfaceStyle = .unspecified
+            case 1:
+              window?.overrideUserInterfaceStyle = .light
+            case 2:
+              window?.overrideUserInterfaceStyle = .dark
+            default:
+               break
+          }
+        }
         let rootNavigationController = UINavigationController()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         var initialVC = UIViewController()
@@ -30,11 +42,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         else{
         initialVC = storyboard.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
         }
+        
         self.window?.rootViewController = rootNavigationController
         rootNavigationController.pushViewController(initialVC, animated: false)
         window?.makeKeyAndVisible()
     }
-
+    func barItemFunc(){
+        
+    }
+    
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.
         // This occurs shortly after the scene enters the background, or when its session is discarded.

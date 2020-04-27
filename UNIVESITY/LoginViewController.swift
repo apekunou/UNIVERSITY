@@ -21,11 +21,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var incorrectPasswordLabel: UILabel!
     
     @IBAction func loginPressed(_ sender: Any) {
-          let usersJson = NetworkManager.shared.fetchUsersData()
-//        do {
-            sleep(2)
-//        }
-//        print(usersJson)
+
         var password = passwordText.text ?? ""
         var login = loginText.text ?? ""
         if PasswordValidator.checkPassword(password) != true || login == ""
@@ -38,12 +34,18 @@ class LoginViewController: UIViewController {
         if let personsVC = storyboard?.instantiateViewController(identifier:"PersonsCollectionViewController") as? PersonsCollectionViewController {
             navigationController?.pushViewController(personsVC,animated: true)
         }
+        guard let navigationController = self.navigationController else { return }
+        var navigationArray = navigationController.viewControllers // To get all UIViewController stack as Array
+        //navigationArray.remove(at: navigationArray.count - 2) // To remove previous UIViewController
+        navigationArray.removeFirst()
+        self.navigationController?.viewControllers = navigationArray
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        incorrectPasswordLabel.isHidden = true
     }
 
 

@@ -13,10 +13,10 @@ import Foundation
   static let shared = NetworkManager()
   var usersArray: [User] = []
     
-    func fetchUsersData()->[User] {
+    func fetchUsersData(completion: @escaping([User]) -> Void) {
         let session = URLSession.shared
         let url = URL(string: "https://jsonplaceholder.typicode.com/users")
-        guard let uri = url else { return [] }
+        guard let uri = url else { return }
         var components = URLComponents()
         components.path = uri.path
         components.scheme = uri.scheme
@@ -32,13 +32,16 @@ import Foundation
             else {return}
             do {
                 self.usersArray = try JSONDecoder().decode([User].self, from: data)
+                DispatchQueue.main.async {
+                    completion(self.usersArray)
+                }
                // print(self.usersJson)
             } catch {
                 print(error)
             }
         }
         task.resume()
-        return self.usersArray
+        return
     }
 }
 

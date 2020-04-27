@@ -178,6 +178,21 @@
             </objects>
             <point key="canvasLocation" x="2698.5507246376815" y="105.80357142857143"/>
         </scene>
+        <!--Settings View Controller-->
+        <scene sceneID="2vc-aS-Fby">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="YbQ-0z-bVh" customClass="SettingsViewController" customModule="UNIVESITY" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xGW-LP-TlV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="fBX-9Y-lhl"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vIV-Eg-ZWC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3452" y="106"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="U6X-p3-abU">
             <objects>

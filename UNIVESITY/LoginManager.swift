@@ -33,6 +33,8 @@ class LoginManager {
         userDefaults.set(login, forKey: "userLogin")
         userDefaults.set(password, forKey: "userPassword")
         userDefaults.set("true", forKey: "userLogined")
+        StorageManager.shared.saveUserCredToFile(login: login, password: password, fileName: "UserCredential.txt")
+        StorageManager.shared.readUserDataFromFile(fileName: "UserCredential.txt")
     }
     
     func makeLogoff() {

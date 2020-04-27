@@ -31,8 +31,19 @@ class PersonsCollectionViewController: UIViewController {
         collectionView.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
         collectionView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         collectionView.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        
+        //let settingsBtn = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.done, target: nil, action: nil)
+        let settingsBtn = UIBarButtonItem(title: "Settings", style: .plain, target: self, action: #selector(settingsAction))
+        //settingsBtn.title = "settings"
+        navigationItem.rightBarButtonItem = settingsBtn
+       // navigationBar.setItems([navigationItem], animated: false)
     }
 
+    @objc func settingsAction(){
+        if let vc = storyboard?.instantiateViewController(identifier:"SettingsViewController") as? SettingsViewController {
+            navigationController?.pushViewController(vc,animated: true)
+        }
+    }
 }
 
 extension PersonsCollectionViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
